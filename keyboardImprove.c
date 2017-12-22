@@ -13,4 +13,7 @@ int main(int argc, char *argv[]){
     * 4. set file mode creation mask to 0
     * 5. Close all fildescriptors that will not be used.
     */
+    
+    printf("Hello, world! %s\n", argv[argc-1]);
+
 }
