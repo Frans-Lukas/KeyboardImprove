@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<linux/input.h>
 
 
 /*
@@ -15,5 +16,13 @@ int main(int argc, char *argv[]){
     */
     
     printf("Hello, world! %s\n", argv[argc-1]);
+    int fd;
+
+    fd = open("/dev/input/event0", O_RDONLY);
+    struct input_event ev;
+    if(fd < 0){
+        return EXIT_FAILURE;
+    }
+
 
 }
